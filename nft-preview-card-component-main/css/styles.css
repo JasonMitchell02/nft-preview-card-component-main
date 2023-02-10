@@ -1,0 +1,175 @@
+:root {
+
+/* Primary Colours */
+
+--primary: hsl(215, 51%, 70%);
+--primary-bright: hsl(178, 100%, 50%);
+
+/* Neutral Colours */
+
+--main-background: hsl(217, 54%, 11%);
+--card-background: hsl(216, 50%, 16%);
+--line-colour: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+
+/* Font family and weights */
+
+--fm-main: 'Outfit', sans-serif;
+
+--fw-light: 300;
+--fw-reg: 400;
+--fw-bold: 600;
+
+}
+
+body {
+    background-color: var(--main-background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fm-main);
+    font-size: 18px;
+    
+}
+
+/* Main Card */
+
+.card {
+    background-color: var(--card-background);
+    width: 355px;
+    padding: 25px 25px 10px 25px;
+    border-radius: 1rem;
+    box-shadow: rgba(5, 9, 17, 0.56) 0px 22px 70px 4px;
+}
+
+.card-body {
+    padding: 15px 0;
+}
+
+/* Image and fade transition */
+
+.mask {
+    position: relative;
+    overflow: hidden;
+}
+
+.mask > .card-img-top {
+    display: block;
+    border-radius: 0.6rem;
+}
+
+.mask > .eye-icon {
+    position: absolute;
+    inset: 0;
+    background: hsla(178, 100%, 50%, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7rem;
+}
+
+.mask > .card-img-top,
+.mask > .eye-icon {
+    transition: .2s ease-in-out;
+}
+
+.mask > .eye-icon.fade {
+    opacity: 0;
+
+}.mask:hover > .eye-icon.fade {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Text Information */
+
+h1 {
+    color: var(--white);
+    font-weight: var(--fw-light);
+    font-size: 1.5rem;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+h1:hover {
+    color: var(--primary-bright);
+    cursor: pointer;
+}
+
+p {
+    color: var(--primary);
+    font-weight: var(--fw-light);
+    line-height: 1.5;
+}
+
+/* Pricing layout and content */
+
+.price-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.value {
+    color: var(--primary-bright);
+    font-weight: var(--fw-reg);
+    font-size: 16px;
+}
+
+.days-left {
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+/* Line Break */
+
+hr {
+    color: var(--primary);
+    margin: 0;
+}
+
+/* Recognition */
+
+.credit {
+    display: flex;
+    justify-content: baseline;
+    padding-top: 15px;
+}
+
+.portrait {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.creation {
+    font-size: 16px;
+    padding-top: 6px;
+}
+
+span {
+   color: var(--white); 
+}
+
+span:hover {
+    color: var(--primary-bright);
+    cursor: pointer;
+}
+
+/* Frontend Mentor Attribution */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
